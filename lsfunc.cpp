@@ -1,22 +1,47 @@
 #include "lsfunc.h"
 
-int ls_func(struct dirent **namelist){
+char conversion(long int *x){
+	if(*x < 1024){
+		return 'B';
+	}
+	else if(*x < (1024*1024)){
+		*x = *x/1024;
+		return 'K';
+	}
+	else if(*x < (1024*1024*1024)){
+		*x = *x/(1024*1024);
+		return 'M';
+	}
+	else{
+		*x = *x/(1024*1024*1024);
+		return 'G';
+	}
+}
+
+int ls_func(char *s){
+	struct dirent **namelist_local;
 	struct stat filename;
 	
-	int n;
+	int chdir_success,no_entries;
+		
+	chdir_success = chdir(s);
+	no_entries = scandir(".", &namelist_local, NULL, alphasort);
 	
-	n = scandir(".", &namelist, NULL, alphasort);
-	
-	if (n == -1) {
-		perror("scandir");
-		return 1;
+	if(chdir_success){
+		printf("Change Directory Failed");
 	}
 	
-	for(int i = 0; i<n; i++){
-		stat(namelist[i]->d_name, &filename);
+	if (no_entries == -1) {
+		return no_entries;
+	}
+			
+	for(int i = 0; i<no_entries; i++){
+		stat(namelist_local[i]->d_name, &filename);
 		
-		printf("%s\t", namelist[i]->d_name);
-		printf("%ld\t", filename.st_size);
+		printf("%-35.25s", namelist_local[i]->d_name);
+		
+		char x = conversion(&filename.st_size);
+		printf("%ld%c\t", filename.st_size,x);
 		
 		printf("%s\t",(getgrgid(filename.st_gid))->gr_name);
 		printf("%s\t",(getpwuid(filename.st_uid))->pw_name);
@@ -29,12 +54,10 @@ int ls_func(struct dirent **namelist){
         printf( (filename.st_mode & S_IXGRP) ? "x" : "-");
         printf("\t");
 
-		printf("%s\n", ctime(&filename.st_mtime));
-		free(namelist[i]);
+		printf("%s", ctime(&filename.st_mtime));
+		free(namelist_local[i]);
 	}
 	
-	
-	
-	free(namelist);
-	return 0;
+	free(namelist_local);
+	return no_entries;
 }

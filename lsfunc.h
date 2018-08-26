@@ -7,10 +7,9 @@
 #include <grp.h>
 #include <pwd.h>
 
-
 #ifndef INC_LSFUNC_H
 #define INC_LSFUNC_H
-
-int ls_func(struct dirent **);
+ 
+int ls_func(char *);
 
 #endif

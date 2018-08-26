@@ -4,6 +4,6 @@
 #ifndef INC_CURSORS_H
 #define INC_CURSORS_H
 
-void movement(char);
+void movement();
 
 #endif
