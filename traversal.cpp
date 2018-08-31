@@ -1,4 +1,4 @@
-#include "traversal.h"
+#include "globalvariables.h"
 
 extern char c;
 extern int count;

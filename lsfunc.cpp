@@ -1,4 +1,5 @@
-#include "lsfunc.h"
+#include "globalvariables.h"
+
 
 char conversion(long int *x){
 	if(*x < 1024){

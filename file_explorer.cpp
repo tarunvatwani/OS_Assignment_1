@@ -1,11 +1,4 @@
 #include "globalvariables.h"
-#include "lsfunc.h"
-#include "noncanonical.h"
-#include "canonical.h"
-#include "cursors.h"
-#include "enterdirectory.h"
-#include "traversal.h"
-
 
 int main()
 {	

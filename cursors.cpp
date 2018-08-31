@@ -1,4 +1,4 @@
-#include "cursors.h"
+#include "globalvariables.h"
 
 extern char c;
 extern int count;

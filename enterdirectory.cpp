@@ -1,4 +1,5 @@
-#include "enterdirectory.h"
+#include "globalvariables.h"
+
 
 extern stack<char *> backward_filename;
 extern char c;
