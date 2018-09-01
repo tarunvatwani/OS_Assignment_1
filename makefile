@@ -1,7 +1,7 @@
 CC = g++
 CFLAGS = -Wall -std=c++1z
-DEPS = globalvariables.h
-OBJ = file_explorer.o lsfunc.o canonical.o noncanonical.o globalvariables.o cursors.o enterdirectory.o traversal.o
+DEPS = globalheader.h
+OBJ = file_explorer.o lsfunc.o canonical.o noncanonical.o globalheader.o cursors.o enterdirectory.o traversal.o
 %.o: %.cpp $(DEPS)
 	$(CC) $(CFLAGS) -c -o $@ $<
 

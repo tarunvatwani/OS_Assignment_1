@@ -1,4 +1,4 @@
-#include "globalvariables.h"
+#include "globalheader.h"
 
 extern char c;
 extern int count;
@@ -13,12 +13,12 @@ void traverse(){
     		char *s = forward_filename.top();
 			backward_filename.push(s);
     		forward_filename.pop();
+			count = 0;
     	
     		printf("\033c");
-			count_MAX = ls_func(s);
+			ls_func(s);
 		
 			printf("\033[%dA",(count_MAX));
-			count = 0;
 		}
 	
 	}
@@ -27,12 +27,12 @@ void traverse(){
     		char *s = backward_filename.top();
     		forward_filename.push(s);
     		backward_filename.pop();
-    	
+    		count = 0;
+    		
     		printf("\033c");
-			count_MAX = ls_func(s);
+			ls_func(s);
 		
 			printf("\033[%dA",(count_MAX));
-			count = 0;
 		}
     }
 }

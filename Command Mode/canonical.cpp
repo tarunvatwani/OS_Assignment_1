@@ -1,4 +1,4 @@
-#include "canonical.h"
+#include "globalcmdmode.h"
 
 void non_can2can(struct termios* initial_settings){
 

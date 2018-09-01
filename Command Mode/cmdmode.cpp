@@ -1,8 +1,4 @@
-#include "noncanonical.h"
-#include "canonical.h"
 #include "globalcmdmode.h"
-#include "readcmd.h"
-#include "cpcmd.h"
 
 int main()
 {	
@@ -13,17 +9,17 @@ int main()
 		c = getchar();
 		
 		if(c == 27){
+			cout<<"\33[2K\r";
 			break;
 		}
 		
 		else{
 			read_cmd();
-			cout<<command_vector[0]<<"\n";
 			if(!( command_vector[0].compare("copy") )){
-				cout<<"h2";
 				cp_cmd();
 			}
 		}
+		
 	}
 	
 	non_can2can(&initial_settings);

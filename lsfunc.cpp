@@ -1,5 +1,9 @@
-#include "globalvariables.h"
+#include "globalheader.h"
 
+extern int count;
+extern int count_MAX;
+extern int print_limit;
+extern struct winsize w;
 
 char conversion(long int *x){
 	if(*x < 1024){
@@ -19,24 +23,35 @@ char conversion(long int *x){
 	}
 }
 
-int ls_func(char *s){
+void ls_func(char *s){
 	struct dirent **namelist_local;
 	struct stat filename;
 	
 	int chdir_success,no_entries;
 		
 	chdir_success = chdir(s);
+		
 	no_entries = scandir(".", &namelist_local, NULL, alphasort);
 	
-	if(chdir_success){
+	if(chdir_success == -1){
 		printf("Change Directory Failed");
+		return;
 	}
 	
 	if (no_entries == -1) {
-		return no_entries;
+		printf("Scan Directory Failed");
+		return;
 	}
-			
-	for(int i = 0; i<no_entries; i++){
+	
+	count_MAX = no_entries;
+	
+	///////////////////////////////////////////////////////////////////
+	int start = (count <= (print_limit-1))?0:(count - (print_limit-1));
+	int end   = (count_MAX < print_limit)?count_MAX:( ((print_limit + start) < count_MAX)?(print_limit + start):count_MAX);
+	//////////////////////////////////////////////////////////////////
+	
+	//cout<<"start = "<<start<<" end = "<<end<<"count = "<<count;
+	for(int i = start; i<end; i++){
 		stat(namelist_local[i]->d_name, &filename);
 		
 		printf("%-35.25s", namelist_local[i]->d_name);
@@ -60,5 +75,4 @@ int ls_func(char *s){
 	}
 	
 	free(namelist_local);
-	return no_entries;
 }

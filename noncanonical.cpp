@@ -1,4 +1,4 @@
-#include "globalvariables.h"
+#include "globalheader.h"
 
 void can2non_can(struct termios* initial_settings){
 

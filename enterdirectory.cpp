@@ -1,5 +1,4 @@
-#include "globalvariables.h"
-
+#include "globalheader.h"
 
 extern stack<char *> backward_filename;
 extern char c;
@@ -17,15 +16,28 @@ void enter_dir(){
 	}
 	
 	if(c == '\n'){
+			
+		if(strcmp( root, get_current_dir_name() ) == 0){
+				if(strcmp(namelist_local[count]->d_name, "..") == 0){
+					return;
+				}
+		}
+
 		if ((stat(namelist_local[count]->d_name, &sb) == 0)&& S_ISDIR(sb.st_mode))
 		{	
 			backward_filename.push(get_current_dir_name());
-	
+			
+			while (!forward_filename.empty()) {
+        		forward_filename.pop();
+    		}
+			
+			
+			char *s = namelist_local[count]->d_name;
+			count = 0;
 			printf("\033c");
-			count_MAX = ls_func(namelist_local[count]->d_name);
+			ls_func(s);
 			free(namelist_local[count]);
 			printf("\033[%dA",(count_MAX));
-			count = 0;
 		}
 		
 		if((stat(namelist_local[count]->d_name, &sb) == 0)&& S_ISREG(sb.st_mode)){
@@ -38,15 +50,19 @@ void enter_dir(){
 	}
 
 	if(c == 127){
+		if(strcmp(root, get_current_dir_name()) == 0){
+			return;
+		}
+		
 		if ((stat(namelist_local[1]->d_name, &sb) == 0)&& S_ISDIR(sb.st_mode))
 		{	
 			backward_filename.push(get_current_dir_name());
-
+			char *s = namelist_local[1]->d_name;
 			printf("\033c");
-			count_MAX = ls_func(namelist_local[1]->d_name);
-			free(namelist_local[count]);
-			printf("\033[%dA",(count_MAX));
 			count = 0;
+			ls_func(s);
+			free(namelist_local[1]);
+			printf("\033[%dA",(count_MAX));
 		}
 	}
 	
