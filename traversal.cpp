@@ -25,7 +25,7 @@ void traverse(){
     if (c==68){
     	if(!backward_filename.empty()){
     		char *s = backward_filename.top();
-    		forward_filename.push(s);
+    		forward_filename.push(get_current_dir_name());
     		backward_filename.pop();
     		count = 0;
     		
