@@ -49,5 +49,7 @@ void traverse(void);
 void cmd_mode();
 void cp_cmd();
 void read_cmd();
+void create_file();
+void create_dir();
 
 #endif

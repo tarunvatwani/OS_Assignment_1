@@ -18,6 +18,14 @@ void cmd_mode()
 			if(!( command_vector[0].compare("copy") )){
 				cp_cmd();
 			}
+			else if(!( command_vector[0].compare("create_dir") )){
+				create_dir();
+			}
+			else if(!( command_vector[0].compare("create_file") )){
+				create_file();
+			}
+
+
 		}
 		
 	}
