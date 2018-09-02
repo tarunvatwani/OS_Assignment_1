@@ -1,5 +1,4 @@
 #include "globalheader.h"
-#include "dir_delete.cpp"
 
 void delete_dir(){
 

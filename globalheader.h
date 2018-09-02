@@ -54,5 +54,6 @@ void create_dir();
 void rename();
 void delete_file();
 void delete_dir();
-
+void dir_del_fn(const char*);
+void move();
 #endif

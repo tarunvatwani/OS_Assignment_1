@@ -34,6 +34,9 @@ void cmd_mode()
 			else if(!( command_vector[0].compare("delete_dir") )){
 				delete_dir();				
 			}
+			else if(!( command_vector[0].compare("move") )){
+				move();				
+			}
 			else{
 				cout<<"\33[2K\r";
 				cout<<"Invalid Command";
