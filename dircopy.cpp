@@ -24,16 +24,20 @@ void cp_dir(const char* source, const char* dest){
 		cout<<"Error in cp_dir line 24 for"<<source<<":"<<strerror(errno);
 		return;
 	}
-		
-	if(mkdir(source,filename.st_mode) == -1){
+	
+	
+	size_t pos = string(source).find_last_of("/");
+   	string dir_name = string(source).substr(pos+1);
+	
+	if(mkdir(dir_name.c_str(),filename.st_mode) == -1){
 		cout<<"\33[2K\r";
-		cout<<"Error in cp_dir line 30 for"<<source<<":"<<strerror(errno);
+		cout<<"Error in cp_dir line 34 for"<<dir_name.c_str()<<":"<<strerror(errno);
 		return;
 	}
 	
-	if(chdir(source) == -1){
+	if(chdir(dir_name.c_str()) == -1){
 		cout<<"\33[2K\r";
-		cout<<"Error in cp_dir line 38 for"<<source<<":"<<strerror(errno);
+		cout<<"Error in cp_dir line 40 for"<<dir_name.c_str()<<":"<<strerror(errno);
 		return;
 	
 	}
@@ -42,13 +46,13 @@ void cp_dir(const char* source, const char* dest){
 	
 	if(chdir(working_dir) == -1){
 		cout<<"\33[2K\r";
-		cout<<"Error in cp_dir line 38 for"<<source<<":"<<strerror(errno);
+		cout<<"Error in cp_dir line 49 for"<<source<<":"<<strerror(errno);
 		return;
 	}
 	
 	if(chdir(source) == -1){
 		cout<<"\33[2K\r";
-		cout<<"Error in cp_dir line 38 for"<<source<<":"<<strerror(errno);
+		cout<<"Error in cp_dir line 55 for"<<source<<":"<<strerror(errno);
 		return;
 	
 	}
@@ -68,4 +72,3 @@ void cp_dir(const char* source, const char* dest){
 	chdir(working_dir);
 
 }
-

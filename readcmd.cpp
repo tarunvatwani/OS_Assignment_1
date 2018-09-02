@@ -11,7 +11,12 @@ void read_cmd(){
 	char x;
 	string cmd;
 	
-	cout<<c;
+	if(c == '\n'){
+		cout<<"\33[2K\r";
+	}
+	else{
+		cout<<c;
+	}
 
 	while(1){
 		x = getchar();
@@ -31,7 +36,7 @@ void read_cmd(){
 	}
 	
 		
-	if(c != cmd[0]){
+	if( c != cmd[0] && !(cmd.empty()) ){
 		string dummy(1,c);        //Adjustment for first charcter
 		cmd.insert(0,dummy);      //Input
 	}

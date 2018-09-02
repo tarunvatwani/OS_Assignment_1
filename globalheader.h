@@ -51,5 +51,8 @@ void cp_cmd();
 void read_cmd();
 void create_file();
 void create_dir();
+void rename();
+void delete_file();
+void delete_dir();
 
 #endif

@@ -15,6 +15,7 @@ void cmd_mode()
 		
 		else{
 			read_cmd();
+			
 			if(!( command_vector[0].compare("copy") )){
 				cp_cmd();
 			}
@@ -24,8 +25,19 @@ void cmd_mode()
 			else if(!( command_vector[0].compare("create_file") )){
 				create_file();
 			}
-
-
+			else if(!( command_vector[0].compare("rename") )){
+				rename();
+			}
+			else if(!( command_vector[0].compare("delete_file") )){
+				delete_file();
+			}
+			else if(!( command_vector[0].compare("delete_dir") )){
+				delete_dir();				
+			}
+			else{
+				cout<<"\33[2K\r";
+				cout<<"Invalid Command";
+			}
 		}
 		
 	}

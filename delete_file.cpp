@@ -1,10 +1,10 @@
 #include "globalheader.h"
 
-void rename(){
+void delete_file(){
 
 	int argc = command_vector.size();
 	
-	if(argc != 3){
+	if(argc != 2){
 		cout<<"\33[2K\r";
 		cout<<"Invalid Command !!!!";
 	}	
@@ -12,9 +12,9 @@ void rename(){
 	else{
 		char* working_dir = get_current_dir_name();
 		
-		if(rename(command_vector[1].c_str(),command_vector[2].c_str())!= 0){
+		if(remove(command_vector[1].c_str()) != 0){
 			cout<<"\33[2K\r";
-			cout<<"Error in rename line 17 "<<":"<<strerror(errno);
+			cout<<"Error in delete_file line 17 for "<<command_vector[1]<<":"<<strerror(errno);
 			return;
 		}
 		
