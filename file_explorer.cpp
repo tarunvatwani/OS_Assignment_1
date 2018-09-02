@@ -35,6 +35,11 @@ int main()
 			printf("\033[%dA",count_MAX);
 		}
 		
+		else if(c == ':'){
+			printf("\033[%dB", (w.ws_row - 1));
+			cmd_mode();
+		}
+		
 		else
 			continue;		
 	}

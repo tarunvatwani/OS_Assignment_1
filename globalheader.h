@@ -11,6 +11,8 @@
 #include <pwd.h>
 
 #include <iostream>
+#include <sstream>
+#include <vector>
 #include <stack>
 #include <string>
 
@@ -19,6 +21,8 @@ using namespace std;
 #ifndef INC_GLOBALHEADER_H
 #define INC_GLOBALHEADER_H
 
+/*Variable Declaration*/
+//Normal Mode
 extern struct termios initial_settings;
 extern struct winsize w;
 extern char c;
@@ -29,12 +33,21 @@ extern char* root;
 extern stack<char*> forward_filename;
 extern stack<char*> backward_filename;
 
+//Command Mode
+extern vector<string> command_vector;
+
 /*Functions Declaration*/
+//Normal Mode
 void non_can2can(struct termios*);
 void can2non_can(struct termios*);
 void movement();
 void enter_dir(void);
 void ls_func(char *);
 void traverse(void);
+
+//Command Mode
+void cmd_mode();
+void cp_cmd();
+void read_cmd();
 
 #endif

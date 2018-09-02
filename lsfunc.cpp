@@ -45,12 +45,9 @@ void ls_func(char *s){
 	
 	count_MAX = no_entries;
 	
-	///////////////////////////////////////////////////////////////////
 	int start = (count <= (print_limit-1))?0:(count - (print_limit-1));
 	int end   = (count_MAX < print_limit)?count_MAX:( ((print_limit + start) < count_MAX)?(print_limit + start):count_MAX);
-	//////////////////////////////////////////////////////////////////
 	
-	//cout<<"start = "<<start<<" end = "<<end<<"count = "<<count;
 	for(int i = start; i<end; i++){
 		stat(namelist_local[i]->d_name, &filename);
 		

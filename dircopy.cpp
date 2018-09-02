@@ -1,4 +1,4 @@
-#include "globalcmdmode.h"
+#include "globalheader.h"
 
 void cp_dir(const char* source, const char* dest){
 	

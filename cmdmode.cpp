@@ -1,10 +1,10 @@
-#include "globalcmdmode.h"
+#include "globalheader.h"
 
-int main()
+extern vector <string> command_vector;
+extern char c;
+
+void cmd_mode()
 {	
-	tcgetattr(STDIN_FILENO, &initial_settings);
-	can2non_can(&initial_settings);
-
 	while(true){
 		c = getchar();
 		
@@ -21,9 +21,5 @@ int main()
 		}
 		
 	}
-	
-	non_can2can(&initial_settings);
-	
-	return 0;
 	
 }

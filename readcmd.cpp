@@ -1,4 +1,4 @@
-#include "globalcmdmode.h"
+#include "globalheader.h"
 
 extern char c;
 extern vector <string> command_vector;

@@ -1,4 +1,4 @@
-#include "globalcmdmode.h"
+#include "globalheader.h"
 #include "filecopy.cpp"
 #include "dircopy.cpp"
 
