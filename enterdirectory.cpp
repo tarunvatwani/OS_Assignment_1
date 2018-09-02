@@ -37,7 +37,7 @@ void enter_dir(){
 			printf("\033c");
 			ls_func(s);
 			free(namelist_local[count]);
-			printf("\033[%dA",(count_MAX));
+			printf("\033[%dA",(w.ws_row - 1));
 		}
 		
 		if((stat(namelist_local[count]->d_name, &sb) == 0)&& S_ISREG(sb.st_mode)){
@@ -62,7 +62,7 @@ void enter_dir(){
 			count = 0;
 			ls_func(s);
 			free(namelist_local[1]);
-			printf("\033[%dA",(count_MAX));
+			printf("\033[%dA",(w.ws_row - 1));
 		}
 	}
 	

@@ -18,7 +18,7 @@ void traverse(){
     		printf("\033c");
 			ls_func(s);
 		
-			printf("\033[%dA",(count_MAX));
+			printf("\033[%dA",(w.ws_row - 1));
 		}
 	
 	}
