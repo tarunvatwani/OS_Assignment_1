@@ -1,6 +1,7 @@
 #include "globalheader.h"
 
 extern char c;
+extern char* root;
 extern vector <string> command_vector;
 extern struct termios initial_settings;
 
@@ -49,4 +50,16 @@ void read_cmd(){
 	while(stream>>argument)
 		command_vector.push_back(argument);
 		
+	
+	int argc = command_vector.size();
+	
+	for(int i = 1; i<(argc-1); i++){
+		size_t pos = command_vector[i].find_first_of('/');
+		string q = command_vector[i].substr(0,pos);
+
+		if((q.compare("~/") == 0) || (q.compare("/root/") == 0)){
+			command_vector[i].replace(0,pos,root);
+	}
+					
+	}		
 }

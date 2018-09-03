@@ -18,7 +18,7 @@ void cp_file(const char* filename, const char* dirname){
 
 		if(chdir(dirname) != 0){
 			cout<<"\33[2K\r";
-			cout<<"Error in cp_file line 19 for "<<dirname<<":"<<strerror(errno);
+			cout<<"Error in cp_file line 21 for "<<dirname<<":"<<strerror(errno);
 			fclose(in);
 			return;
 		}

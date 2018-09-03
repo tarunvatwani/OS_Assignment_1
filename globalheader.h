@@ -15,6 +15,7 @@
 #include <vector>
 #include <stack>
 #include <string>
+#include <queue>
 
 using namespace std;
 
@@ -57,5 +58,5 @@ void delete_dir();
 void dir_del_fn(const char*);
 void move();
 void goto_cmd();
-
+void snapshot();
 #endif

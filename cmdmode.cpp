@@ -41,6 +41,9 @@ void cmd_mode()
 				goto_cmd();
 				break;				
 			}
+			else if(!( command_vector[0].compare("snapshot") )){
+				snapshot();		
+			}
 
 			else{
 				cout<<"\33[2K\r";
