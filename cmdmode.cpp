@@ -37,6 +37,11 @@ void cmd_mode()
 			else if(!( command_vector[0].compare("move") )){
 				move();				
 			}
+			else if(!( command_vector[0].compare("goto") )){
+				goto_cmd();
+				break;				
+			}
+
 			else{
 				cout<<"\33[2K\r";
 				cout<<"Invalid Command";

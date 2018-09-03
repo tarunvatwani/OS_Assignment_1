@@ -43,7 +43,7 @@ int main()
 				printf("\033[%dB",(w.ws_row - 2 - count));
 			}
 		
-			printf("Normal Mode");
+			printf("Command Mode");
 			printf("\033[B");
 			printf("\r");
 			

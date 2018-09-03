@@ -56,4 +56,6 @@ void delete_file();
 void delete_dir();
 void dir_del_fn(const char*);
 void move();
+void goto_cmd();
+
 #endif
