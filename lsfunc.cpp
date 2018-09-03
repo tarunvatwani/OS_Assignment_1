@@ -1,5 +1,6 @@
 #include "globalheader.h"
 
+extern char* root;
 extern int count;
 extern int count_MAX;
 extern int print_limit;
@@ -69,6 +70,16 @@ void ls_func(char *s){
 
 		printf("%s", ctime(&filename.st_mtime));
 		free(namelist_local[i]);
+	}
+	
+	string relative_path = string(get_current_dir_name());
+	string root_path = string(root);
+	size_t pos = relative_path.find(root_path);
+	if(root_path.compare(relative_path) == 0){
+		cout<<"\e[1mcurrent_dir = /root\e[0m"<<"\r";	
+	}
+	else{
+		cout<<"\e[1mcurrent_dir = /root"<<relative_path.substr(pos+(root_path.length()))<<"\e[0m\r";	
 	}
 	
 	free(namelist_local);

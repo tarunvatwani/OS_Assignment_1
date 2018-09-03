@@ -2,6 +2,7 @@
 
 int main()
 {	
+	freopen("errors.txt","w",stderr);
 	tcgetattr(STDIN_FILENO, &initial_settings);
 	can2non_can(&initial_settings);
 
@@ -48,7 +49,7 @@ int main()
 			printf("\r");
 			
 			cmd_mode();
-			
+						
 			printf("\033[A");
 			printf("\33[2K\r");
 			printf("\033[B");
@@ -59,23 +60,24 @@ int main()
 			else{
 				printf("\033[%dA",(w.ws_row - 1 - count));
 			}
+			
 		}
 		
 		else
 			continue;		
 	}	
 	
-		if((count + 1) >= print_limit){
-			printf("\033[B");
+	if((count + 1) >= print_limit){
+		printf("\033[2B");
+	}
+	else{
+		if(print_limit < count_MAX){
+			printf("\033[%dB", print_limit - count + 1);
 		}
 		else{
-			if(print_limit < count_MAX){
-				printf("\033[%dB", print_limit - count);
-			}
-			else{
-				printf("\033[%dB", count_MAX - count);
-			}
-		}	
+			printf("\033[%dB", count_MAX - count + 1);
+		}
+	}	
 	
 	non_can2can(&initial_settings);
 		

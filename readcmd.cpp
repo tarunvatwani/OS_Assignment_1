@@ -39,16 +39,16 @@ void read_cmd(){
 		
 	if( c != cmd[0] && !(cmd.empty()) ){
 		string dummy(1,c);        //Adjustment for first charcter
-		cmd.insert(0,dummy);      //Input
+		cmd.insert(0,dummy);	  //Input
+		istringstream stream(cmd); 
+	
+		string argument;
+	
+		while(stream>>argument)
+			command_vector.push_back(argument);
 	}
 
 	
-	istringstream stream(cmd); 
-	
-	string argument;
-	
-	while(stream>>argument)
-		command_vector.push_back(argument);
 		
 	
 	int argc = command_vector.size();
@@ -58,10 +58,14 @@ void read_cmd(){
 		if((pos != string::npos)){
 			command_vector[i].replace(pos,1,root);
 		}
+		
 		pos = command_vector[i].find("/root/");
-
 		if((pos != string::npos)){
 			command_vector[i].replace(pos,5,root);
+		}
+		
+		if(command_vector[i].compare("/") == 0){
+			command_vector[i] = root;
 		}	
 	}		
 }

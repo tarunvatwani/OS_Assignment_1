@@ -15,6 +15,9 @@ void cp_file(const char* filename, const char* dirname){
 	else{
 		size_t pos = string(filename).find_last_of("/");
    		string file_name = string(filename).substr(pos+1);
+   		
+   		struct stat permission;
+		stat(filename, &permission);
 
 		if(chdir(dirname) != 0){
 			cout<<"\33[2K\r";
@@ -24,6 +27,8 @@ void cp_file(const char* filename, const char* dirname){
 		}
 	
 		out = fopen(file_name.c_str(),"wb");
+		
+		chmod(file_name.c_str(), permission.st_mode);
 
 		while((c = fgetc(in)) != EOF)
 			fputc(c,out);

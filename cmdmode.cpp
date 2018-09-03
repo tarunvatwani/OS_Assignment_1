@@ -15,8 +15,11 @@ void cmd_mode()
 		
 		else{
 			read_cmd();
-			
-			if(!( command_vector[0].compare("copy") )){
+			if(command_vector.empty()){
+				cout<<"\33[2K\r";
+				cout<<"Invalid Command";
+			}
+			else if(!( command_vector[0].compare("copy") )){
 				cp_cmd();
 			}
 			else if(!( command_vector[0].compare("create_dir") )){
@@ -44,7 +47,6 @@ void cmd_mode()
 			else if(!( command_vector[0].compare("snapshot") )){
 				snapshot();		
 			}
-
 			else{
 				cout<<"\33[2K\r";
 				cout<<"Invalid Command";
