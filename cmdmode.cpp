@@ -17,7 +17,7 @@ void cmd_mode()
 			read_cmd();
 			if(command_vector.empty()){
 				cout<<"\33[2K\r";
-				cout<<"Invalid Command";
+				cout<<"No Command";
 			}
 			else if(!( command_vector[0].compare("copy") )){
 				cp_cmd();

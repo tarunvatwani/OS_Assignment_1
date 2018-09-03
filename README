@@ -1,0 +1,67 @@
+########################
+Terminal File Explorer #
+By Tarun Vatwani       #
+Roll No 2018201075     #
+########################
+
+This application handles the basic functionality of a file_explorer(such as create, delete, move etc. for both file and folders(including hidden file and folders)).
+The main purpose of Normal Mode is to navigate through all the file and folders contained in your application root, whereas command mode implements basic file operations. 
+
+The application operates in non canonical mode throughout and changes to canonical mode just before qutting the application.
+All the global variables and function declaration for both operating modes are defined in "globalheader.h" and "globalheader.cpp".
+
+-----------
+-----------
+NORMAL MODE
+-----------
+-----------
+
+The apllication by default opens in Normal Mode and it sets your current directory as your root.
+The Normal Mode has the following functionality:
+
+1. On the start the application dispalys the contents of root folder(including hidden file and folders) similair to ls -lh command but in the given order
+   (Name, file size, user and group ids, permissions, modified time_stamp). This functionality is implemented using "ls_func.cpp" which lists contents
+   of any directory.
+   
+2. Pressing Enter on any directory displays the contents of this directory and pressing Backspace changes to its immediate parent. But you can not go beyond 
+   your application root. This functionality is implemented in "enterdirectory.cpp".
+   
+3. One can scroll vertically using up and down arrow keys and max no of files it can display is 80 percent of total number of rows at any size. But it does 
+   not handles wrap around of file_names. This functionality is in "cursors.cpp"
+   
+4. One can traverse through all the previously visited directory by pressing left arrow key and can traverse to next directory by pressing right arrow key.
+   Also pressing h changes the directory to its application root. This functionality is in "traversal.cpp".
+   
+5. Now to change from Normal Mode to Command Mode one needs to press ":". The cursor will automatically move to last line of th terminal and Command Mode will
+   be displayed at the second last line. 
+   
+------------
+------------
+COMMAND MODE
+------------
+------------
+
+The command mode starts and normal stays as it is untill you exit command mode and refresh the directory by pressing Enter on "." i.e. the current directory.
+Although command mode handles the absolute path from appliaction root but it does not handles the possibility of user inputting a path which belongs to some parent directory of application root
+
+The command mode implemets the following functionality:
+
+1. Copy_Command   : This command copies contents a source file(s) or source directory(s) to a destination directory. This command takes multiple arguments(can be files and directories) 
+				    but the last arguments should always be a destination directory.It handles both absolute and relative path with respect to root of the application.
+
+2. Move_Command   : This command copies moves a source file(s) or source directory(s) to a destination directory. This command takes multiple arguments(can be files and directories) 
+				   but the last arguments should always be a destination directory. It handles both absolute and relative path with respect to root of the application.
+
+3. Rename_Command : This commad excepts only 3 arguments and renames the (file/directory). It handles both absolute and relative path with respect to root of the application.
+
+4. Create_File    : This commad excepts only 3 arguments and creates a new file. It handles both absolute and relative path with respect to root of the application.
+   Create_Dir     : This commad excepts only 3 arguments and creates a new directory. It handles both absolute and relative path with respect to root of the application.
+
+5. Delete_File    : This commad excepts only 2 arguments. It handles both absolute and relative path with respect to root of the application.
+   Delete_Dir     : This commad excepts only 2 arguments. It handles both absolute and relative path with respect to root of the application.
+
+6. Goto			  : This commad excepts only 2 arguments. It handles both absolute and relative path with respect to root of the application.
+
+7. Snapshotting   : This commad excepts only 3 arguments. It handles both absolute and relative path with respect to root of the application.
+
+8. The search functionality is not incorporated in this appliaction

@@ -6,21 +6,27 @@ extern int count_MAX;
 extern int print_limit;
 extern struct winsize w;
 
-char conversion(long int *x){
+string conversion(long int *x){
+	string s;
 	if(*x < 1024){
-		return 'B';
+		s = to_string(*x);
+		s.push_back('B');
+		return s;
 	}
 	else if(*x < (1024*1024)){
-		*x = *x/1024;
-		return 'K';
+		s = to_string(*x/1024);
+		s.push_back('K');
+		return s;
 	}
 	else if(*x < (1024*1024*1024)){
-		*x = *x/(1024*1024);
-		return 'M';
+		s = to_string(*x/(1024*1024));
+		s.push_back('M');
+		return s;
 	}
 	else{
-		*x = *x/(1024*1024*1024);
-		return 'G';
+		s = to_string(*x/(1024*1024*1024));
+		s.push_back('G');
+		return s;
 	}
 }
 
@@ -54,11 +60,11 @@ void ls_func(char *s){
 		
 		printf("%-35.25s", namelist_local[i]->d_name);
 		
-		char x = conversion(&filename.st_size);
-		printf("%ld%c\t", filename.st_size,x);
+		string x = conversion(&filename.st_size);
+		printf("%-10.7s\t", x.c_str());
 		
-		printf("%s\t",(getgrgid(filename.st_gid))->gr_name);
-		printf("%s\t",(getpwuid(filename.st_uid))->pw_name);
+		printf("%-10.7s\t",(getgrgid(filename.st_gid))->gr_name);
+		printf("%-10.7s\t",(getpwuid(filename.st_uid))->pw_name);
 
         printf( (filename.st_mode & S_IRUSR) ? "r" : "-");
         printf( (filename.st_mode & S_IWUSR) ? "w" : "-");

@@ -37,19 +37,19 @@ void read_cmd(){
 	}
 	
 		
-	if( c != cmd[0] && !(cmd.empty()) ){
-		string dummy(1,c);        //Adjustment for first charcter
-		cmd.insert(0,dummy);	  //Input
-		istringstream stream(cmd); 
+	if( c != cmd[0] && (!(cmd.empty())) ){
+		string dummy(1,c);        			//Adjustment for first charcter
+		cmd.insert(0,dummy);	  			//Input
+	}
 	
+	if(!(cmd.empty())){
+		istringstream stream(cmd); 
 		string argument;
 	
 		while(stream>>argument)
 			command_vector.push_back(argument);
 	}
 
-	
-		
 	
 	int argc = command_vector.size();
 	
