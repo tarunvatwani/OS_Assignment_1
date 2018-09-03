@@ -1,0 +1,405 @@
+.:
+canonical.cpp 	canonical.o 	cmdmode.cpp 	cmdmode.o 	cpcmd.cpp 	cpcmd.o 	create_dir.cpp 	create_dir.o 	create_file.cpp 	create_file.o 	cursors.cpp 	cursors.o 	delete_dir.cpp 	delete_dir.o 	delete_file.cpp 	delete_file.o 	dir_delete.cpp 	dir_delete.o 	dircopy.cpp 	enterdirectory.cpp 	enterdirectory.o 	file_explorer 	file_explorer.cpp 	file_explorer.o 	filecopy.cpp 	globalheader.cpp 	globalheader.h 	globalheader.o 	goto.cpp 	goto.o 	lsfunc.cpp 	lsfunc.o 	makefile 	move.cpp 	move.o 	noncanonical.cpp 	noncanonical.o 	readcmd.cpp 	readcmd.o 	rename.cpp 	rename.o 	snapshot.cpp 	snapshot.o 	traversal.cpp 	traversal.o 	
+
+.git:
+COMMIT_EDITMSG 	HEAD 	config 	description 	dump.txt 	index 	
+
+branches:
+dump.txt 	
+
+hooks:
+applypatch-msg.sample 	commit-msg.sample 	post-update.sample 	pre-applypatch.sample 	pre-commit.sample 	pre-push.sample 	pre-rebase.sample 	prepare-commit-msg.sample 	update.sample 	
+
+info:
+exclude 	
+
+logs:
+HEAD 	
+
+objects:
+dump.txt 	
+
+refs:
+dump.txt 	
+
+refs:
+dump.txt 	
+
+01:
+61689088cd097dd3dc6ad2df3f8a2bd147fb00 	a916e5218354c39c6cdf7af7c1f9669787a2ac 	dump.txt 	
+
+02:
+a8a1b497fd62f3ef43ebf903f5aa0ae1f2be4a 	dump.txt 	
+
+03:
+52e6b0331c3bc06c35ac569cbbf8a23c95d580 	908bfef66c556826f74455c16c669f63ffcc8e 	dump.txt 	
+
+05:
+0176c3a1f62d61b7a1fb81200728e2e7c0c9dd 	dump.txt 	
+
+06:
+de6a2fd8a52c92d5935f5e9f9259dfc6e2f4b9 	dump.txt 	
+
+07:
+6e8de03495ce976205edf247bc44142c6b2fec 	dump.txt 	fbb1cc930485523fe3fa54c74bbb51e12cefd7 	
+
+08:
+df2c1126626bdb6178769861c807d7917730b3 	dump.txt 	
+
+0d:
+d60db78314c615c774ce93278c68b9b591a066 	dump.txt 	
+
+0e:
+ddf9b2368a79ed3c24f219d9c218182a7ced9a 	dump.txt 	
+
+0f:
+45da80d2d20313fa6775621c1137410b480a1a 	4a885c49d19c80a4c765d30943887ab2050f8a 	dump.txt 	
+
+10:
+aca4c9a48e038c62b026b5c51eecae2396785c 	beefb42dc1ae5c5225122c35c56d1694dd8c9e 	dump.txt 	
+
+11:
+d3c89531273c9be5b345c6ac7bcb5dd0b5426e 	dump.txt 	
+
+12:
+1b2d9cb3dd92c518a49bacbd5705fb95702f59 	dump.txt 	
+
+13:
+dump.txt 	e89a6ab1f128cb1978d2b68e68dd2d31af8b5f 	
+
+14:
+96c19fd6565378841ad4ff999863ecc87fe760 	dump.txt 	
+
+16:
+422770d5cfe27a60b0783f1e69a7d5659bafe6 	dump.txt 	
+
+1b:
+316235962a354553eb74d85d5a1c321d502f9f 	dfd3908cecabd6affc6c8886b7c22ee6caa64c 	dump.txt 	
+
+29:
+b038eb6c25f7238f94b37b22b0ed5ce194713f 	dump.txt 	
+
+2e:
+157fee8382d06e46ae846763d7b50e86652c81 	dump.txt 	
+
+32:
+b3b804004626b52e995051e9fe6077b710cb69 	dump.txt 	
+
+34:
+3e3051a9a14f4ae31ae4dc1aaa0e26a7922e02 	dump.txt 	
+
+36:
+1010cdee83122e970d216b7914333194035b4c 	dump.txt 	
+
+39:
+dump.txt 	e4a43b23ef121ed5dd02b77575800a7b814021 	
+
+3b:
+c6278c5a6fdceed4fd70296aa86fe9f1fdf6a3 	dump.txt 	
+
+3d:
+10625b9dbc952135ecf8b0fff97182c8892165 	b043f3d095d7a2215c88ed7b871fecd343b701 	dump.txt 	
+
+40:
+209cb6f27189bfe88f78d6b0f191da773451d2 	dump.txt 	
+
+41:
+a6286667d44db336222d0d787410148cb51d22 	dump.txt 	
+
+43:
+a957ddcd1233e80bcdb00a4c24c8ef20669922 	dump.txt 	
+
+44:
+a7ad85807acd5cf24b04d7808cdd72bfe0167d 	dump.txt 	
+
+47:
+9126bfd03bf2c1281d1cafae5786db92ab1763 	d97e06e209cc08e1d9341bf727a8a51ed1c65d 	dump.txt 	
+
+49:
+44ae528783bcd8241cbd278c10a54d6871f776 	
+
+4b:
+4830361ebf97374e5b2c668c802a13d84c3fab 	dump.txt 	
+
+4c:
+dump.txt 	ecb90f0ce011820ca32d1cb5a585754c4232ea 	fa3988c650971ad0c10f39304b36ab45501626 	
+
+51:
+19b542f5bcc3519559b9264c8d21d681fd2405 	dump.txt 	
+
+52:
+261f4d5e7d83227bf2bcc9ecf80cdbe71a7e60 	dump.txt 	
+
+56:
+dump.txt 	eba69153bf673bf8f650019810dc887226342c 	
+
+57:
+dump.txt 	f7487c9761de439ee5abf1f9f2b7feed0cef03 	
+
+58:
+451628df52b59439a0423c4e4c851d29b100ef 	96ba964f157153654b0f8743898953730b0f42 	dump.txt 	
+
+59:
+4e45665ff191325916c195ba3d1598e01f721b 	dump.txt 	
+
+5a:
+c0914b8b174314fc333626a56e3bc2db46fb47 	dump.txt 	
+
+5e:
+06a3d04c3ec6a1c7b8541c4f8a5c1dc2845278 	dump.txt 	
+
+5f:
+478018549e03071576b389587e5abd5ca202f8 	583334eda227b96f834aa30aef31cade67f268 	dump.txt 	
+
+62:
+978a0b4ff6513b4cec4cbba77605ac5bfdb9a1 	c2413518fa629a6490b599babe9bbb6a8c96ee 	dump.txt 	
+
+63:
+0e4339e36e9c103cce99e84fefceec1ddd08b2 	dump.txt 	
+
+64:
+6ebb7be65c6001f0a942e6c140674bfc9de29e 	dump.txt 	
+
+66:
+a73055b30a71bbb02cf9822ed398387453e32a 	
+
+68:
+3385d96907742862ed68367e49c4ff3228fb27 	a8629b890b071c51dfcd7c86498f6a9a192119 	dump.txt 	
+
+69:
+59601cc3dcceacf91f354622dffa0558826585 	5ca8de2e6ea7175d008abe23342fb2a134fd8d 	dump.txt 	
+
+6a:
+606f1b392889109897a3c7e9f6574c6ef208cc 	94d401e0b12307007d200c653b007abb06abd5 	a0effe9f0d221c6da0f3731b8aa8e501f55f02 	dump.txt 	
+
+6e:
+6967d2cbc159e931749c8bea81d86eedf0fb6b 	dd10a80524c02036748b797a793935dd0f1aa0 	dump.txt 	
+
+6f:
+dea0f65c6657eedc08bf228bb5a530099df5e6 	
+
+70:
+d6b9b3e77145877713ada2eb7f476af27593aa 	dump.txt 	
+
+73:
+15c45d6209a3a8375f2abd0523d54396d4b9ff 	74d802f029cedd2afc85eb9277b61a1822b418 	ba9859df78140000b0ce9e58df80a923a47030 	dump.txt 	
+
+77:
+3f1576e84db5ff1ff8f952941baff82daae207 	dump.txt 	
+
+79:
+b1a82018cb5ca31d2210018b8a3c38d43adfee 	be02bd1c6f9cf2023ad4c7ce481c6d35cdb0fd 	dump.txt 	
+
+7d:
+9a0eb3cb7ce2ffd28ff1d9aefd27900515923c 	dump.txt 	
+
+7f:
+4d27074858b1d5a8619e8ddb20b09263289389 	8d72e08fee25ab1772ad5ace700ce40c57861f 	dump.txt 	
+
+81:
+36a02d9ee62eccf0de59447377eaacd0fc94fe 	dump.txt 	
+
+82:
+8150bcdb862757ddb1d2ac0b373ac1d9d28364 	a984777bcf1c2d8d959acb0f163512c4edf74d 	dump.txt 	
+
+83:
+8078c811b0c75efa64665d3f6798a3c6c471b5 	dump.txt 	
+
+84:
+8fcd0d8dfaca8e1f55d28326188b40aadcfbd6 	b4aca95a319d322e539ace845724d0e803a303 	dump.txt 	
+
+88:
+4deec4c9a62dd01a286303af7be0c0d9fd34a2 	dump.txt 	
+
+89:
+a47cfef333611c84ae737df23c74bdc28e224c 	dump.txt 	
+
+8c:
+12fcc7729cb8eaeb14ffeb63ddb7f0bed9d775 	dump.txt 	
+
+8e:
+a4f72ed9a13004a8545132444a014a1c8657b9 	dump.txt 	
+
+92:
+bc7a7652722d05e16586eebe22ef2a2c298b3b 	
+
+99:
+dump.txt 	f0d745455136311d48c1cc1036435495fb18b3 	
+
+9a:
+94ac76601639b856a52e6a0ce9c2defac7772a 	dump.txt 	
+
+9b:
+9fb1b5b33979f865ca19fb00d20020f3fd5f89 	dump.txt 	
+
+9e:
+b99bb4e23f9cba91adfa20e2e75274f55eeac2 	dump.txt 	
+
+9f:
+4ae623edc69e59ade1a5acc4441ab1d4adc3f5 	dump.txt 	
+
+a0:
+82b73adabe33fe1cba676ee7508f81c34a96f5 	dump.txt 	
+
+a1:
+dump.txt 	e324023f1036fd24546af2e67b1cc3741f9a3d 	ebe3ea2b5efa7ba1daca46ff4c52d53f6afe6c 	
+
+a2:
+27b52a4dfc383da60c1c2270b9f6fd5b983f8b 	b4cc9b4eeccb3524fe8ca8c0489fa7e85fa342 	dump.txt 	
+
+a3:
+4e70cd914688ba0cdd7c7439d622e5f2303f78 	81c11dcec28a56adc3eac92a4c84710d512c98 	dump.txt 	
+
+a4:
+3b8ad9e59c4e6b90d053a40c4c0bf7a637a870 	711a737b377b4cfe69abd31cde670bb77941dd 	dump.txt 	
+
+a7:
+07e38a234eea2f35d9189ca13656ddf16da49d 	caf6e00b001431bad4b20ebb3f8dd0cd22acbc 	dump.txt 	
+
+aa:
+b2b06493d4b860842c5bb8d4417ccbc499c240 	dump.txt 	
+
+ae:
+15554a8facb26b06e79db87e142e4bb613b473 	dump.txt 	
+
+b1:
+dump.txt 	fef20940c19b9994e6a26ad9609b81241fe34d 	
+
+b5:
+dump.txt 	e3c5d71da26305d09d410e15297c7adbeb9bf5 	
+
+b6:
+dump.txt 	e57cb56b2454b4749f5f47f7a0bf0cb834206a 	
+
+b7:
+0e99e7fcdd356deee50f0d9551c1dd2112351d 	1fdbe3e112ae4b3429e7a5cdce2c348a2c1a32 	944609b888e0e5ab1f221e941fd73dff13fd48 	dump.txt 	
+
+bb:
+0326320822a48f31f0c4378f896437d1f8e94e 	dump.txt 	eef8c72b17c5e6d8de65d59195a28994386ab0 	
+
+bc:
+64e53442a329de6e811f0337a87c47e8f76c5c 	cac18630f49f0c5145ac2b32be3d41572a8400 	dump.txt 	
+
+bf:
+254606f27cafc1e85074c5dc87ac2d8c041cc4 	c8f095ec71fa38ea0c804b3b0f63e3e902cc89 	dump.txt 	
+
+c1:
+b33f57ca3402d1e4f34434eaddd5bcfec4c6b8 	dump.txt 	
+
+c4:
+dump.txt 	eab7bf838653ea6aa02a353797ad271e29cd4c 	
+
+cb:
+1a4db28537da1527abcf4c4787081b94e95c65 	dump.txt 	
+
+ce:
+874ff2c18ed1918fcdf29d8a98140d3fc1085c 	dump.txt 	
+
+cf:
+20d1715fe2b42f7cc0e967b1e4454280fc00a8 	dump.txt 	
+
+d1:
+dump.txt 	e876028a9f432dbf4bc4be2a6821041b634642 	
+
+d5:
+dump.txt 	fd12f734ad7e437540565ee8d00ef12f63f724 	
+
+d6:
+a3726d460a034bcda955de0aac2e7358ef1803 	dump.txt 	ec17fc2349a19b9df8bc9898ff1b699f3e83db 	
+
+d8:
+4076c0635c21828511fb2906aa056953fbdbec 	dump.txt 	
+
+d9:
+31b85f4a40349eb63a8b8e830a2ef320d962bb 	dump.txt 	
+
+da:
+0f2f6e542e4ea9c63f859e6570dc4c36962139 	57e2b03dbb0ecc290dc0e9bbb2b0ebe82e1e3e 	9d195d8a000422f578c2aae5a164fc0943f920 	dump.txt 	e2167c3d95dd6f1a423f934ad53b2304520634 	
+
+db:
+ae8ea4a1d2dfc2c11da1f0dc6ea0a84394ee74 	dump.txt 	
+
+dc:
+c1c6d19814106c54e3bb53aa48a23b03b131cc 	dump.txt 	
+
+de:
+333aa6d7ec6ca1f9307b2a8b0a660ba0c311a0 	dump.txt 	
+
+df:
+11a255bd27e615c131043050f98033065b8079 	dd2c8813d618767c1afcc237f14c66bb7af2ce 	dump.txt 	
+
+e0:
+52c2decdea9f03645d3c2cf01e1d8f27a7024b 	904dfd5fc4d00db682e309ab37fbce1a705805 	dump.txt 	
+
+e1:
+127a2fb3f3e74b06c1709a13927fba2f644ca1 	7a26edc34b2aa15b01733f0a92fa99c280c5ce 	dump.txt 	
+
+e4:
+29d12321c0f0a9e1474fe78a716c78a2dffff2 	dump.txt 	fbbcb7d9c20d9f68497a4ef3271c268a4564f8 	
+
+e6:
+9de29bb2d1d6434b8b29ae775ad8c2e48c5391 	dump.txt 	
+
+eb:
+24a90af6c4291239698dad302c9c3982899264 	82919a96d264415d99568d7ef5694c14a36291 	dump.txt 	
+
+ef:
+3fdcd2257b09130a88ebf62b156df1afd3dde6 	9d67a2b5bceb9878ed673b111242e4969e6a7d 	dump.txt 	
+
+f2:
+9a54242d721315ea44ba436b0e3ed5e214f2e0 	dump.txt 	
+
+f3:
+85ca26011228f6d8f6c1b707d4e481b9fd1ee6 	b686f00930823bff1f8b659e861672622240cc 	dump.txt 	
+
+f5:
+0518ec0b8f22fb6ae9a16e67c4a2cf4374fd02 	51bc58438f7515adea171efdba2abd648178e6 	909055d31c629b7114a9258b20fda48f9cd5ea 	dump.txt 	
+
+f6:
+dump.txt 	e6226abf26c85daff7e13227234406a53ec2f6 	
+
+f7:
+1da34e9c3cb2ec5fa5472231f2a33d8243c3b8 	dda34554de9ec91a252c884ae9366c7ae54e4a 	dump.txt 	
+
+f8:
+86d74a7bb7fc9043e1dbcda2525a0407c617b1 	dump.txt 	
+
+fb:
+73ac2e981b47801656ee2fd7531770c00809ee 	dump.txt 	
+
+fc:
+0c75875c7f9c761b5c4998adce7f4bcb33ffa0 	dump.txt 	
+
+fe:
+b394efb70acf4f2706aa69c75f3772a44c602a 	dump.txt 	
+
+ff:
+24e8287b1eb2b26a8acbe254a1ef5be93abb5b 	dump.txt 	
+
+info:
+dump.txt 	
+
+pack:
+dump.txt 	
+
+heads:
+dump.txt 	master 	
+
+remotes:
+dump.txt 	
+
+tags:
+dump.txt 	
+
+heads:
+dump.txt 	master 	
+
+remotes:
+dump.txt 	
+
+origin:
+dump.txt 	master 	
+
+origin:
+dump.txt 	master 	
+

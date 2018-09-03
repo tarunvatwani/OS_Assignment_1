@@ -53,13 +53,15 @@ void read_cmd(){
 	
 	int argc = command_vector.size();
 	
-	for(int i = 1; i<(argc-1); i++){
-		size_t pos = command_vector[i].find_first_of('/');
-		string q = command_vector[i].substr(0,pos);
+	for(int i = 1; i<(argc); i++){
+		size_t pos = command_vector[i].find("~/");
+		if((pos != string::npos)){
+			command_vector[i].replace(pos,1,root);
+		}
+		pos = command_vector[i].find("/root/");
 
-		if((q.compare("~/") == 0) || (q.compare("/root/") == 0)){
-			command_vector[i].replace(0,pos,root);
-	}
-					
+		if((pos != string::npos)){
+			command_vector[i].replace(pos,5,root);
+		}	
 	}		
 }
